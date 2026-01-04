@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Avatar Cinema</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+    <h1>AVATAR CINEMA</h1>
+    <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="movies.html">Movies</a></li>
+        <li><a href="booking.html">Booking</a></li>
+        <li><a href="about.html">About</a></li>
+    </ul>
+</nav>
+
+<section class="home">
+    <div class="hero">
+        <img src="gambar_avatar/banner.jpg">
+        <h2>Welcome to Pandora</h2>
+        <p>Pesan tiket film Avatar favoritmu dengan pengalaman bioskop futuristik.</p>
+    </div>
+</section>
+
+<footer>
+    &copy;CopyRight - [Mutiara Putri - 251011700855 - 01SIFP013]
+    <p id="datetime" align="left"></p>
+</footer>
+
+<script>
+function updateDateTime() {
+    const now = new Date();
+    const hari = ["Minggu","Senin","Selasa","Rabu","Kamis","Jumat","Sabtu"];
+    const bulan = ["Januari","Februari","Maret","April","Mei","Juni","Juli","Agustus","September","Oktober","November","Desember"];
+    document.getElementById("datetime").innerHTML =
+    `${hari[now.getDay()]}, ${now.getDate()} ${bulan[now.getMonth()]} ${now.getFullYear()} | ${now.getHours()}:${now.getMinutes()}:${now.getSeconds()}`;
+}
+setInterval(updateDateTime,1000);
+updateDateTime();
+</script>
+
+</body>
+</html>
